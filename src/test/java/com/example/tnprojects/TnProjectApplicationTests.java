@@ -1,4 +1,4 @@
-package com.example.log4j;
+package com.example.tnprojects;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
