@@ -1,4 +1,4 @@
-package com.example.log4j;
+package com.example.tnprojects;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
