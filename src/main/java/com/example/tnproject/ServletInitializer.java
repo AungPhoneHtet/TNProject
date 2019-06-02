@@ -1,4 +1,4 @@
-package com.example.tnprojects;
+package com.example.tnproject;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;

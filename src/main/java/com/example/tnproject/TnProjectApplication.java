@@ -1,4 +1,4 @@
-package com.example.tnprojects;
+package com.example.tnproject;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
