@@ -9,11 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.example.tnproject.TnProjectApplication;
 import com.example.tnproject.entity.TNUser;
 import com.example.tnproject.service.TNUserService;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = TnProjectApplication.class)
 public class TNUserServiceTest {
 
 	@Autowired
@@ -22,9 +23,9 @@ public class TNUserServiceTest {
 	@Test
 	public void saveTest() {
 		TNUser user = new TNUser();
-		user.setUserId("TN00001");
+		user.setUserId("TN00002");
 		user.setPassword("password");
-		user.setName("Test");
+		user.setName("Test2");
 		user.setNRC("9121828192");
 		
 		assertTrue(TNUserService.save(user).getId() != null);
