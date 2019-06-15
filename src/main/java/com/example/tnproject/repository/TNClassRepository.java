@@ -7,7 +7,7 @@ import com.example.tnproject.entity.TNClass;
 
 
 @Repository("TNClassRepository")
-public interface TNClassRepository extends JpaRepository<TNClass, Long>{
+public interface TNClassRepository extends JpaRepository<TNClass, Long> {
 
 
 }

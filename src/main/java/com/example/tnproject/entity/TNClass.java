@@ -15,7 +15,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "class")
+@Table(name = "tnclass")
 public class TNClass extends Root {
 	
 	@Id
@@ -28,7 +28,9 @@ public class TNClass extends Root {
 	@Column(name="status")
 	private int status;
 	
-	private Long category_id;
+	@OneToOne
+	@JoinColumn(name="fk_categoryid")
+	private Category category_id;
 	
 	@OneToOne
 	@JoinColumn(name="fk_userid")

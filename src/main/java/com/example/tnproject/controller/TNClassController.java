@@ -6,5 +6,6 @@ import com.example.tnproject.service.TNClassService;
 public class TNClassController {
 
 	@Autowired
+	
 	private TNClassService tnclassService;
 }
