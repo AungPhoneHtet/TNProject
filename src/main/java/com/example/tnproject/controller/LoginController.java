@@ -24,6 +24,6 @@ public class LoginController {
 	public String loginPost(HttpServletRequest request, HttpServletResponse response, @ModelAttribute ("TNUser") TNUser tnUser) 
 	{
 		
-		return "/dashboard";
+		return "newUser";
 	}
 }
