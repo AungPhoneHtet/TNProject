@@ -16,7 +16,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "tnuser")
-public class TNUser {
+public class TNUser extends Root{
 	
 	
 	@Id
