@@ -11,6 +11,9 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+	<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+
   <title>SB Admin - Login</title>
 
   <!-- Custom fonts for this template-->
@@ -27,16 +30,19 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
-        <form action = "login" method = "POST" modelAttribute = "TNUSerDTO">
+      <c:if test="${not empty errorMsg}">
+      	<h3>${errorMsg}</h3>
+      </c:if>
+        <form:form action = "login" method = "POST" modelAttribute = "TNUser">
           <div class="form-group">
             <div class="form-label-group">
-              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
+              <form:input path = "email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus"></form:input>
               <label for="inputEmail">Email address</label>
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
+              <form:input path = "password" type="password" id="inputPassword" class="form-control" placeholder="Password" required="required"></form:input>
               <label for="inputPassword">Password</label>
             </div>
           </div>
@@ -49,7 +55,7 @@
             </div>
           </div>
           <input type = "submit" class="btn btn-primary btn-block" value = "Login">
-        </form>
+        </form:form>
         <div class="text-center">
           <a class="d-block small mt-3" href="register.html">Register an Account</a>
           <a class="d-block small" href="forgot-password.html">Forgot Password?</a>

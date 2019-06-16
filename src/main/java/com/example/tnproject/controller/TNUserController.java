@@ -25,21 +25,21 @@ public class TNUserController {
 	@Autowired
 	TNUserService tnUserService;
 
-	@GetMapping(value = "/saveUser")
+	@GetMapping(value = "/newUser")
 	public String createUser(Model model) {
 		model.addAttribute("tnUser", new TNUser());
-		return "user/newUser";
+		return "newUser";
 	}
 
-	@PostMapping(value = "/saveUser")
+	@PostMapping(value = "/newUser")
 	public String createUser(@Valid @ModelAttribute TNUser tnUser, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
-			return "user/newUser";
+			return "newUser";
 		} else {
 			tnUserService.save(tnUser);
 			System.out.println(tnUser.toString());
-			return "user/newUser";
+			return "newUser";
 		}
 	}
-	
+
 }
