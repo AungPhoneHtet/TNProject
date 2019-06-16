@@ -15,5 +15,13 @@
     <definition name="newUser" extends=".mainTemplate">
         <put-attribute name="body" value="/WEB-INF/views/user/newUser.jsp" />
     </definition>
+    
+    <definition name="newCategory" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/views/category/newCategory.jsp" />
+    </definition>
+    
+    <definition name="categoryList" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/views/category/categoryList.jsp" />
+    </definition>
 
 </tiles-definitions>
