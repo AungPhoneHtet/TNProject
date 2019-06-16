@@ -31,7 +31,7 @@ public class LoginController {
 	{
 		logger.info("Login Controller --> login get method is load successfully.");
 		model.addAttribute("TNUser", new TNUser());
-		return "default";
+		return "WEB-INF/views/login.jsp";
 	}
 	
 	@PostMapping({"/","/login"})
@@ -50,6 +50,14 @@ public class LoginController {
 		return "redirect:default";
 	}
 	
+	@GetMapping("/logout")
+	public String logoutGet(HttpServletRequest request, HttpServletResponse response) 
+	{
+		logger.info("Login Controller --> logout Get method is load successfully.");
+		HttpSession session = request.getSession();
+		session.invalidate();
+		return "redirect:login";
+	}
 	/*
 	 * @GetMapping({"/newUser"}) public String dashboardGet(HttpServletRequest
 	 * request, HttpServletResponse response,Model model) {
